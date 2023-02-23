@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>My Website</title>
+</head>
+<body>
+    <header class="header-logo">
+        <img class="logo" src="./logorevou.png" alt="logo-revou">
+        <div class="menu">
+            <button> <a href="index.html">Home</a></button>
+            <button> <a href="profile.html">My Profile</a></button>
+            <button> <a href="message.html">Message Us</a></button>
+        </div>
+    </header>
+
+    <div class="welcome">
+        <h3>Hi Comel, Welcome To Website </h3>
+        <p>Ini adalah website latihan pertama</p>
+    </div>
+
+    <div class="images">
+        <img class="images-slideshow" src="./website1.jpg" alt="">
+        <img class="images-slideshow" src="./website2.jpg" alt="">
+        <img class="images-slideshow" src="./website3.jpg" alt="">
+        <button onclick="plusDivs(-1)">Prev</button>
+        <button onclick="plusDivs(1)">Next</button>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs((slideIndex +=n));
+        }
+
+        function showDivs(n){
+            var i;
+            var imgList = document.getElementsByClassName("images-slideshow");
+            if (n > imgList.length) slideIndex = 1;
+            else if (n < 1) slideIndex = imgList.length;
+            for (i = 0; i < imgList.length; i++) {
+                imgList[i].style.display = "none";
+            }
+            imgList[slideIndex-1].style.display = "block";
+        }
+    </script>
+    
+    <div class="OurHeadquarter">
+        <h3>Our Headquarter</h3>
+        <div class="headquarter">
+            <div class="circle">
+                <div class="tiga"></div>
+                <p>Surabaya</p>
+            </div>
+            <div class="circle">
+                <div class="tiga"></div>
+                <p>Jakarta</p>
+            </div>
+            <div class="circle">
+                <div class="tiga"></div>
+                <p>Bandung</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-content">
+        <div class="left-header">
+            <div class="h-shape"></div>
+            <div class="image">
+                <img src="./hehe.jpeg" alt="">
+            </div>
+        </div>
+        <div class="right-header">
+            <h1 class="name">
+                Hi, I'm <span>Salsabila Arifa.</span>
+                A Beginner of Web Developer.
+            </h1>
+            <p>
+                Mahasiswa di salah satu Perguruan Tinggi Negeri dengan Prodi
+                Teknik Informatika. Baru-baru ini tertarik dengan Pemrograman Web.
+            </p>
+        </div>
+    </div>
+    
+    <div class="skillbar">
+        <h3>My Skills</h3>
+        <p>HTML</p>
+        <div class="container">
+            <div class="skills html">40%</div>
+        </div>
+        <p>CSS</p>
+        <div class="container">
+            <div class="skills css">30%</div>
+        </div>
+        <p>SQL</p>
+        <div class="container">
+            <div class="skills sql">75%</div>
+        </div>
+        <p>C</p>
+        <div class="container">
+            <div class="skills c">75%</div>
+        </div>
+    </div>
+
+    <div class="message-us">
+        <h3>MESSAGE US</h3>
+    </div>
+    
+    <div class="main-menu">
+        <div class="form">
+            <divleft class="form-menu">
+                <form name="message-form" onsubmit="return validateform()">
+                Nama: <input placeholder="Nama" type="text" name="name"/> <br>
+                Tanggal Lahir: <input type="date" name="birth"> <br>
+                Jenis Kelamin:
+                <input type="radio" id="male" name="gender" value="laki-laki">
+                <label for="male">Laki-laki</label>
+                <input type="radio" id="female" name="gender" value="perempuan">
+                <label for="female">Perempuan</label> <br>
+                Pesan: <textarea placeholder="Pesan" name="messages" id="" cols="30" rows="10"></textarea> <br>
+                <input type="submit" value="submit">
+                </form>
+            </divleft>
+
+            <divright class="form-menuoutput">
+                <p>Nama: <span id="sender-name"></span></p>
+                <p>Tanggal Lahir: <span id="sender-birth"></span></p>
+                <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+                <p>Pesan: <span id="sender-messages"></span></p>
+            </divright>
+        </div>
+
+        <script>
+            function validateform(){
+                const name = document.forms["message-form"]["name"].value;
+                const birth = document.forms["message-form"]["birth"].value;
+                const gender= document.forms["message-form"]["gender"].value;
+                const messages = document.forms["message-form"]["messages"].value;
+
+                if (name == "" || birth == "" || gender == "" || messages == "") {
+                    alert("Tidak boleh ada yang kosong");
+                    return false;
+                }
+
+                setSenderUI(name, birth, gender, messages);
+                return false;
+            }
+
+            function setSenderUI(name, birth, gender, messages) {
+                document.getElementById("sender-name").innerHTML = name;
+                document.getElementById("sender-birth").innerHTML = birth;
+                document.getElementById("sender-gender").innerHTML = gender;
+                document.getElementById("sender-messages").innerHTML = messages;
+            }
+        </script>
+    </div>
+
+    <footer>
+        <div class="created">
+            <p>Created by Salsabila Arifa</p>
+        </div>
+    </footer>
+
+</body>
+</html>
