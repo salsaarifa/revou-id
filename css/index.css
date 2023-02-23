@@ -1,0 +1,185 @@
+:root {
+    --color-primary: #191d2b;
+    --color-secondary: #855ba1;
+    --color-grey-6: #12181b;    --br-sm-2: 14px;
+    --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+}
+body {
+    background-color: #ceaae6;
+}
+
+/*header logo*/
+.header-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #855ba1;
+    padding: 15px 24px;
+}
+
+.logo {
+    width: 40px;
+}
+
+.welcome {
+    margin-left: 130px;
+}
+
+.images {
+    margin-left: 130px;
+}
+
+.images-slideshow{
+    width: 1000px;
+    height: 100%;
+}
+
+/*Untuk Profile*/
+.header-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    margin-left: 130px;
+    margin-top: 50px;
+}
+.header-content .left-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.header-content .left-header .h-shape {
+    transition: all 0.4s ease-in-out;
+    width: 65%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+}
+.header-content .left-header .image {
+    border-radius: var(--br-sm-2);
+    height: 90%;
+    width: 68%;
+    margin-left: 4rem;
+    background-color: var(--color-black);
+    transition: all 0.4s ease-in-out;
+}
+.header-content .left-header .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+
+.header-content .right-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 18rem;
+}
+.header-content .right-header .name {
+    font-size: 3rem;
+}
+.header-content .right-header .name span {
+    color: var(--color-secondary);
+}
+
+.header-content .right-header p {
+    margin: 1.5rem 0;
+    line-height: 2rem;
+}
+
+/*skills bar*/
+.skillbar{
+    margin-left: 130px;
+    margin-top: 50px;
+}
+
+* {box-sizing: border-box}
+
+.container {
+  width: 70%;
+  background-color: #ceaae6;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  color: white;
+}
+
+.html {
+    width: 40%; background-color: #855ba1;
+}
+.css {
+    width: 30%; background-color: #855ba1;
+}
+.sql {
+    width: 75%; background-color: #855ba1;
+}
+.c {
+    width: 75%; background-color: #855ba1;
+}
+
+.OurHeadquarter{
+    margin-top: 100px;
+    margin-left: 130px;
+}
+
+.tiga {
+    width: 100px;
+    height: 100px;
+    border: solid 1px;
+    border-radius: 50%;
+}
+
+.headquarter{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/*Message Us*/
+.message-us{
+    margin-top: 50px;
+    margin-left: 130px;
+}
+
+.main-menu .form{
+    display: flex;
+    align-items: start;
+    margin-left: 130px;
+    margin-top: 20px;
+}
+
+.form-menu{
+    width: 500px;
+    input style{
+        background-color: #855ba1;
+    }
+}
+
+input, textarea{
+    background-color: #ceaae6;
+}
+
+.form-menuoutput{
+    margin-left: 100px;
+    margin-top: 25px;
+    width: 250px;
+    border: 2px solid #855ba1;
+}
+
+footer{
+    margin-top: 30px;
+    border-bottom: 2px solid #855ba1;
+}
+
+.created{
+    margin-top: 10px;
+    bottom: 0px;
+    float: right;
+}
